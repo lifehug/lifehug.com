@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dave Taylor</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫂</text></svg>">
+<meta name="description" content="Dave Taylor, co-founder and CEO of Etherfuse. Papers, talks and side projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF6; --ink:#0A0A0A; --muted:#66665F; --rule:#E2E2DA; --lime:#D4FF3F; --link:#0A0A0A; --mark-ink:#000000;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#FAFAF6; --ink:#0A0A0A; --muted:#66665F; --rule:#E2E2DA; --lime:#D4FF3F; --link:#0A0A0A; --mark-ink:#000000;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"]{ --bg:#FAFAF6; --ink:#0A0A0A; --muted:#66665F; --rule:#E2E2DA; --link:#0A0A0A; color-scheme: light; }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Schibsted Grotesk", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:1.0625rem; line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+main{max-width:38rem; margin:0 auto; padding:3.5rem 1.5rem 4rem}
+.photo{
+  display:block; width:min(100%, 22rem); aspect-ratio:900/1120; object-fit:cover; margin:0 auto 2rem;
+  border-radius:4px; background:var(--rule);
+}
+h1{
+  font-weight:800; font-size:clamp(2.6rem, 9vw, 3.75rem); line-height:.95;
+  letter-spacing:-.035em; margin:0 0 1.75rem; text-align:center;
+}
+.bio p{margin:0 0 1rem; max-width:34rem}
+.bio p:first-child{font-size:1.25rem; line-height:1.45}
+.contact{display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; margin:1.5rem 0 0; padding:0; list-style:none}
+a{color:var(--link); text-decoration:underline; text-decoration-color:var(--lime); text-decoration-thickness:4px; text-underline-offset:.15em}
+a:hover{background:var(--lime); color:var(--mark-ink); text-decoration:none}
+a:focus-visible{outline:2px solid var(--ink); outline-offset:3px}
+section{margin-top:4rem}
+h2{
+  font-size:1.75rem; font-weight:800; letter-spacing:-.02em; line-height:1.1;
+  margin:0 0 .25rem; padding-bottom:.75rem; border-bottom:2px solid var(--ink);
+}
+h3{font-size:1rem; font-weight:500; color:var(--muted); margin:2rem 0 .25rem}
+ul.items{list-style:none; margin:0; padding:0}
+.items li{padding:1rem 0; border-bottom:1px solid var(--rule)}
+.row{display:flex; justify-content:space-between; align-items:baseline; gap:1rem}
+.row .t{font-weight:700}
+.row .t a{font-weight:700}
+.yr{color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap; font-size:.9375rem}
+.items p{margin:.25rem 0 0; color:var(--muted); font-size:.9375rem; max-width:32rem}
+.group summary{display:flex; align-items:baseline; gap:.5rem; cursor:pointer; margin:2rem 0 0; padding-bottom:.75rem; border-bottom:1px solid var(--rule); list-style:none}
+.group summary::-webkit-details-marker{display:none}
+.group summary::before{content:"+"; color:var(--muted); font-weight:500; width:.75rem}
+.group[open] summary::before{content:"\2212"}
+.group summary h3{display:inline; margin:0}
+.group:first-child summary{margin-top:0}
+section{border-top:2px solid var(--ink); padding-top:1.5rem}
+.group summary:hover h3, .group[open] summary h3{color:var(--ink)}
+.group .count{color:var(--muted); font-size:.875rem; font-variant-numeric:tabular-nums}
+.group summary:focus-visible{outline:2px solid var(--ink); outline-offset:3px}
+.items li:target{background:var(--lime); margin:0 -.75rem; padding-left:.75rem; padding-right:.75rem; border-radius:4px; border-bottom-color:transparent}
+.items li:target p, .items li:target .yr{color:var(--mark-ink)}
+.items li:target a{text-decoration-color:var(--ink)}
+.items li, .group{scroll-margin-top:1.5rem}
+.intro{color:var(--muted); margin:1rem 0 0}
+footer{margin-top:5rem; color:var(--muted); font-size:.875rem}
+@media (max-width:30rem){ main{padding-top:2rem} .bio p:first-child{font-size:1.125rem} }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dave Taylor</h1>
+  <img class="photo" src="dave.jpg" alt="Dave Taylor standing in a market alley in Seoul">
+
+  <div class="bio">
+    <p>Co-founder and CEO of <a href="https://etherfuse.com">Etherfuse</a>, currently building new financial primitives.</p>
+    <p>Before Etherfuse I was leading teams at Boeing and Apple, and studied at MIT.</p>
+    <p>I live in Irvine, California.</p>
+  </div>
+  <ul class="contact">
+    <li><a href="https://x.com/EtherfuseDave">X</a></li>
+    <li><a href="https://www.linkedin.com/in/lifehug">LinkedIn</a></li>
+    <li><a href="https://www.instagram.com/lifehug">Instagram</a></li>
+  </ul>
+
+  <section id="work">
+    <details class="group" id="papers">
+      <summary><h3>Papers</h3><span class="count">5</span></summary>
+      <ul class="items">
+        <li>
+          <div class="row"><span class="t"><a href="https://www.etherfuse.com/beyondusd">Stablecoins Are Not Enough</a></span><span class="yr">2025</span></div>
+          <p>The case for global, yield-bearing primitives: why local-currency government debt, not dollar stablecoins, should be the base layer for on-chain FX.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.sec.gov/about/crypto-task-force/written-submission/etherfuse-brogan-law-052325">Toward a Framework for Tokenized Sovereign Bonds</a></span><span class="yr">2025</span></div>
+          <p>Comment letter to the SEC Crypto Task Force, with Brogan Law, proposing a sandbox for trading tokenized foreign sovereign bonds in the US.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://docs.etherfuse.com/sovereign-coins/sovereign-coins-whitepaper">Sovereign Coins whitepaper</a></span><span class="yr">2024</span></div>
+          <p>Local-currency stablecoins backed by government bonds instead of cash.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://stablebonds.s3.us-west-2.amazonaws.com/neon.pdf">Stablebonds whitepaper</a></span><span class="yr">2023</span></div>
+          <p>How Etherfuse tokenizes sovereign bonds one-for-one and passes the yield through to holders.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://etherfuse.substack.com/p/measuring-proof-of-stake-networks">Measuring Proof-of-Stake Networks</a></span><span class="yr">2022</span></div>
+          <p>Why decentralizing the infrastructure behind proof-of-stake networks matters, and how to measure it.</p>
+        </li>
+      </ul>
+    </details>
+
+    <details class="group" id="articles">
+      <summary><h3>Articles</h3><span class="count">9</span></summary>
+      <ul class="items">
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/1973522988252426356">On Asset Security</a></span><span class="yr">2025</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/1970221583806669282">On Foreign Exchange and The Blockchain</a></span><span class="yr">2025</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/2077404057379991918">Sovereign Debt Designed for The Future of Debt</a></span><span class="yr">2026</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/2036180393188274280">The SEC Just Confirmed: Etherfuse Was Built For This</a></span><span class="yr">2026</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/2028572006413897755">The Yield Inversion</a></span><span class="yr">2026</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/2024998609750823209">The Fundamental Miscalculation of the Crypto Ecosystem</a></span><span class="yr">2026</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://x.com/EtherfuseDave/status/2011894767677067492">Restricting Stablecoin Yield Won't Save US Banks</a></span><span class="yr">2026</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.mitsloanreview.mx/colaborador/como-blockchain-puede-democratizar-el-acceso-a-la-riqueza/">Cómo Blockchain puede democratizar el acceso a la riqueza</a></span><span class="yr">2024</span></div>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://etherfuse.com/articles/the-problem-with-yield">The Problem with Yield</a></span><span class="yr">2024</span></div>
+        </li>
+      </ul>
+    </details>
+
+    <details class="group" id="talks">
+      <summary><h3>Talks</h3><span class="count">25</span></summary>
+      <ul class="items">
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=6Z-SP83FD4Y">Lightning Talks: real-world assets on Stellar</a></span><span class="yr">2026</span></div>
+          <p>Stellar Development Foundation, with RedStone, WisdomTree, Archax and RedSwan.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=cQcRYaa_3IU">Launching Sovereign Debt Onchain in Three Months</a></span><span class="yr">2026</span></div>
+          <p>Stabledash.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=GaKoAVw93Og">Tokenized sovereign debt and Stablebonds</a></span><span class="yr">2026</span></div>
+          <p>Arcane Finance podcast, episode 3.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=b4XqTa_cJkM">Bluechip Dialogues #8</a></span><span class="yr">2026</span></div>
+          <p>Bluechip.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=Lvxnn37m9Dk">On Non-USD Stablecoins</a></span><span class="yr">2026</span></div>
+          <p>On The Brink with Castle Island, episode 620.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=C8BM6n9xEqg">Why Non-USD Stablecoins Need Sovereign Debt Onchain</a></span><span class="yr">2026</span></div>
+          <p>Stableminded, Stabledash.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=IlwXXHcM8_A">Stablecoins Are Not Enough: a recap</a></span><span class="yr">2025</span></div>
+          <p>Short video walk-through of the paper.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=GODOeS6dl6Q">Bringing 100 sovereign currencies on-chain</a></span><span class="yr">2025</span></div>
+          <p>block by block podcast with Denelle Dixon, Stellar Development Foundation.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=01YovFc74KU">Can Stablebonds Bring Brazil On-Chain?</a></span><span class="yr">2025</span></div>
+          <p>Bits and Borders with Aaron Stanley.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=54DLQUzORXI">Lightning Talks</a></span><span class="yr">2025</span></div>
+          <p>Stellar Meridian 2025, with Ondo Finance and Kredete.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://stellar.org/blog/ecosystem/stellar-i-awards-2025">RWAs as usable rails</a></span><span class="yr">2025</span></div>
+          <p>Stellar i³ Awards.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=3FiFpY6Ak-o">Non-USD Stablecoins in Latin America</a></span><span class="yr">2025</span></div>
+          <p>Bitso Stablecoin Conference.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=ASs2cK2ZNDQ">Spreading Stablecoin Stories in LATAM</a></span><span class="yr">2025</span></div>
+          <p>Stabull Stories panel with Bitso and Brazil Crypto Report.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=t8h4Yeio0Us">Stablebonds as a blockchain primitive</a></span><span class="yr">2025</span></div>
+          <p>Solfate Podcast, on bringing foreign exchange on-chain.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=uuYD2OeQJCg">Bringing FX Onchain Through Stablebonds</a></span><span class="yr">2025</span></div>
+          <p>Solana Crossroads, Istanbul.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=Qf_C2at6aMA">100 Trillion Dollars: Revolutionizing Sovereign Debt</a></span><span class="yr">2025</span></div>
+          <p>The reDeFined Podcast, episode 14.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=jrHMNNWQKeE">Stablebonds and the DeFi Bond Market Revolution</a></span><span class="yr">2025</span></div>
+          <p>Espacio Cripto, Frontera.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=Ef52ob00DME">RWAs</a></span><span class="yr">2025</span></div>
+          <p>Solana APEX, Mexico City.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=kEZj6izR9E4">Launching Stablebonds on Stellar</a></span><span class="yr">2025</span></div>
+          <p>Lumen Loop Podcast.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=YQHAHksayvo">How Etherfuse Democratizes Access to Safe Investments</a></span><span class="yr">2024</span></div>
+          <p>Stellar Meridian, London.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=9sP2zyaUAsE">RWAs on Solana</a></span><span class="yr">2024</span></div>
+          <p>Solana Crossroads.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=ZRQNfpDk9BU">Why Does the Mexican Government Want to Tokenize Its Treasuries?</a></span><span class="yr">2024</span></div>
+          <p>Solana podcast.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=TIi6DmU21_g">Etherfuse Tokenizes Mexican Government Bonds</a></span><span class="yr">2024</span></div>
+          <p>SolanaFloor, TNB episode 48.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=3yEepY5SI5g">Etherfuse, tokenización de cetes en México</a></span><span class="yr">2024</span></div>
+          <p>Fintech Talks #119, Día Fintech. In Spanish.</p>
+        </li>
+        <li>
+          <div class="row"><span class="t"><a href="https://www.youtube.com/watch?v=9XmrMBxF5gs">Launching Stablebonds</a></span><span class="yr">2023</span></div>
+          <p>Solana Breakpoint, Amsterdam.</p>
+        </li>
+      </ul>
+    </details>
+
+    <details class="group" id="musings">
+      <summary><h3>Musings</h3><span class="count">1</span></summary>
+      <ul class="items">
+        <li id="book-of-mormon">
+          <div class="row"><span class="t"><a href="book-of-mormon/">Who wrote the Book of Mormon? I asked the text, and here's what it said.</a></span><span class="yr">2026</span></div>
+          <p>One person and an AI ran every authorship and borrowing test they could on the 1830 Book of Mormon, against 23,872 authors from its era. Every number links to the file it came from.</p>
+        </li>
+      </ul>
+    </details>
+  </section>
+
+  <footer>lifehug.com</footer>
+</main>
+<script>
+// Open the section a shared link points at, e.g. lifehug.com/#book-of-mormon or /#talks
+(function(){
+  function show(){
+    var id = decodeURIComponent(location.hash.slice(1)); if(!id) return;
+    var el = document.getElementById(id); if(!el) return;
+    var d = el.closest('details'); if(d) d.open = true;
+    el.scrollIntoView({block:'center'});
+  }
+  window.addEventListener('hashchange', show); show();
+})();
+</script>
+</body>
+</html>
