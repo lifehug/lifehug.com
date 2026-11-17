@@ -22,6 +22,8 @@ a:hover{background:var(--lime);color:#000;text-decoration:none}
 a:focus-visible{outline:2px solid var(--text);outline-offset:3px}
 .kicker,.byline,figcaption,.note,table,.tiles,.btn,.seg,.tip,.legend,.toc,.panel,.bar-row,.draft{font-family:var(--sans)}
 .kicker{font-size:.9375rem;font-weight:500;color:var(--text-3);margin-bottom:1rem}
+.kicker .home{display:inline-block;vertical-align:middle;margin-right:.5rem;border:0;background:none;text-decoration:none}
+.kicker .home img{display:block;width:1.75rem;height:1.75rem}
 .byline{font-size:.9375rem;color:var(--text-3);margin-bottom:1.75rem}
 .draft{font-size:.9375rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.85rem 0;color:var(--text-3);margin-bottom:2rem}
 .lede{font-size:1.25rem;line-height:1.45;color:var(--text)}
