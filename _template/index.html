@@ -9,6 +9,23 @@
 <title>POST_TITLE</title>
 <meta name="description" content="POST_DESCRIPTION">
 <meta name="author" content="Dave Taylor">
+<link rel="canonical" href="https://lifehug.com/POST_SLUG/">
+<meta property="og:url" content="https://lifehug.com/POST_SLUG/">
+<meta property="og:site_name" content="Dave Taylor">
+<!-- TEMPLATE: POST_DATE_ISO is the publish date as YYYY-MM-DD. Change dateModified only when the content really changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "POST_TITLE",
+  "description": "POST_DESCRIPTION",
+  "image": "https://lifehug.com/POST_SLUG/preview.png",
+  "datePublished": "POST_DATE_ISO",
+  "dateModified": "POST_DATE_ISO",
+  "mainEntityOfPage": "https://lifehug.com/POST_SLUG/",
+  "author": {"@type": "Person", "@id": "https://lifehug.com/#dave", "name": "Dave Taylor", "url": "https://lifehug.com/"}
+}
+</script>
 <meta property="og:title" content="POST_TITLE">
 <meta property="og:description" content="POST_DESCRIPTION">
 <meta property="og:image" content="https://lifehug.com/POST_SLUG/preview.png">
@@ -33,7 +50,7 @@
 
 <div class="kicker"><a class="home" href="../" aria-label="Home"><img src="/assets/icon.svg" alt="" width="28" height="28"></a><a href="../#musings">Musings</a></div>
 <h1>POST_TITLE</h1>
-<div class="byline">Dave Taylor &middot; POST_DATE</div>
+<div class="byline">Dave Taylor &middot; <time datetime="POST_DATE_ISO">POST_DATE</time></div>
 
 <p class="lede">Opening paragraph, set slightly larger than the rest.</p>
 

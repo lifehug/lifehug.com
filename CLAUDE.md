@@ -13,6 +13,7 @@ This file is committed and publicly readable. Do not put private notes in it.
 | `book-of-mormon/index.html` | First long-form post (a "Musings" entry). |
 | `assets/post.css` | Shared stylesheet for every long-form post. |
 | `_template/index.html` | Starting point for a new post. Copy it; never link to it. |
+| `robots.txt`, `sitemap.xml` | Allow every crawler; list every page. Add each new post to the sitemap. |
 | `CNAME`, `.nojekyll` | GitHub Pages settings. Leave alone. |
 
 ## Adding a new post
@@ -21,8 +22,9 @@ Always start from the template so the post gets the shared styling, the analytic
 links back to the homepage without anyone having to remember them.
 
 1. Copy `_template/` to `/<slug>/` (lower-case, hyphenated, e.g. `yield-inversion/`).
-2. In `/<slug>/index.html` replace every `POST_*` placeholder (title, description, slug, date)
-   and delete the `noindex` line and the `TEMPLATE:` comments.
+2. In `/<slug>/index.html` replace every `POST_*` placeholder (title, description, slug, date,
+   and `POST_DATE_ISO` as `YYYY-MM-DD`) and delete the `noindex` line and the `TEMPLATE:`
+   comments. The placeholders also fill the canonical link and the JSON-LD block; keep both.
 3. Write the post inside `<main>`. Use the components in the template's comment block (tiles,
    note, figure, bar rows, tables). Style comes from `/assets/post.css`; add post-specific CSS
    in a `<style>` block in that post only if the shared file has nothing suitable.
@@ -30,12 +32,19 @@ links back to the homepage without anyone having to remember them.
 5. Add the post to the homepage: in `index.html`, inside `<details id="musings">`, add an
    `<li id="<slug>">` at the top of the list (newest first), copying the existing entry, and
    raise the number in that section's `<span class="count">`.
-6. The share link is `https://lifehug.com/#<slug>`: it opens Musings and highlights the entry.
+6. Add the post's URL to `sitemap.xml`.
+7. The share link is `https://lifehug.com/#<slug>`: it opens Musings and highlights the entry.
+   When asking another site to link to a post, give `https://lifehug.com/<slug>/` instead, so
+   the link counts for the post and not the homepage.
 
 ## Rules for every page
 
 - **Analytics:** every page must carry the Google tag snippet (`GTM-PW4VK99V`) in `<head>`,
   exactly as it appears in `_template/index.html`. The template already has it.
+- **Search tags:** every page carries a self-referencing `<link rel="canonical">`, Open Graph
+  tags including `og:url`, and a JSON-LD block. Numbers a reader might quote must be in the
+  HTML itself, not only drawn by script: most AI crawlers do not run JavaScript. If a post's
+  content changes, update `dateModified` in its JSON-LD and `lastmod` in `sitemap.xml`.
 - **Look:** light only, never dark. Background `#FAFAF6`, text `#0A0A0A`, lime `#D4FF3F` used
   only for link underlines, hover and highlights. Font is Schibsted Grotesk. Keep it simple.
 - **Charts:** series colours come from the variables in `assets/post.css` (`--s1` blue,
